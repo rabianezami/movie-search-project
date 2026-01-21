@@ -9,7 +9,7 @@ export default function SuggestedMovies({ setSearchTerm }) {
                     key={data}
                     type="button"
                     className="btn btn-sm btn-soft rounded-pill text-light border px-3"
-                    onClick={setSearchTerm}
+                    onClick={() => setSearchTerm(data)}
                 >
                     {data}
                 </button>

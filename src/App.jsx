@@ -8,12 +8,12 @@ import MovieList from './Components/MovieList'
 const API_KEY = import.meta.env.VITE_OMDB_API_KEY
 
 export default function App() {
-  const [searchTerm, setSearchTerm] = useState("horror")
+  const [searchTerm, setSearchTerm] = useState("Spider-Man")
   const [movies, setMovies] = useState([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState("")
 
-  const trimmed = searchTerm.trim()
+const trimmed = String(searchTerm || "").trim()
 
   useEffect(() => {
     if (!trimmed) {
